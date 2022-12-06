@@ -170,7 +170,7 @@ func HeaderToHeaderLegacy(h *Header) *HeaderLegacy {
 // RLP encoding.
 func (h *Header) Hash() common.Hash {
 	if wemixminer.IsPoW() {
-		return rlpHash(HeaderToHeaderLegacy(h))
+		return rlpHash(h)
 	}
 	return rlpHash(h)
 }
